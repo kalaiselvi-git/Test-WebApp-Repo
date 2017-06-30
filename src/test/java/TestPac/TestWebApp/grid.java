@@ -18,11 +18,11 @@ public class grid
 	@BeforeTest
 	public void testgrid(String browser) throws MalformedURLException
 	{
-	String URL="http://localhost:8090/SimpleWebApp/";
+	String URL="http://182.19.39.173:8090/webapp/";
 	if(browser.equalsIgnoreCase("firefox"))
 	{
 		System.out.println("Executing on Firefox");
-		String Node="http://192.168.100.109:4449/wd/hub";
+		String Node="http://192.168.1.6:3334/wd/hub";
 		DesiredCapabilities cap=DesiredCapabilities.firefox();
 		cap.setBrowserName("firefox");
 		cap.setPlatform(Platform.WIN10);
@@ -35,7 +35,7 @@ public class grid
 	{
 		System.out.println("Executing on Chrome");
 		//System.setProperty("webdriver.chrome.driver","C:\\Driver\\chromedriver_2.28.exe");
-		String Node="http://192.168.100.109:4449/wd/hub";
+		String Node="http://192.168.1.6:3334/wd/hub";
 		DesiredCapabilities cap=DesiredCapabilities.chrome();
 		cap.setBrowserName("chrome");
 		cap.setPlatform(Platform.WIN10);
